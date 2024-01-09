@@ -14,7 +14,7 @@ def main():
     print(f"Input: {user_input}")
 
     if validate_length_prompt(prompt=user_input):
-        generate_branding_snipper(prompt=user_input)
+        generate_branding_snippet(prompt=user_input)
         generate_keywords(prompt=user_input)
     else:
         raise ValueError(
@@ -57,7 +57,7 @@ def generate_keywords(prompt: str):
 
     return(keywords_array)
 
-def generate_branding_snipper(prompt: str):
+def generate_branding_snippet(prompt: str):
 
     OPENAI_API_KEY = os.getenv("OPEN_AI_API_KEY")
 
